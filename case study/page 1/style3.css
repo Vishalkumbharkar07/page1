@@ -1,0 +1,88 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.nav{
+    background-color: green;
+    display:flex;
+    width: 100%;
+    height:70px;
+}
+.nav-1{
+    color:white;
+    margin-left:20px;
+    margin-top:15px;
+}
+.nav-2{
+    margin-left:800px;
+    margin-top:20px;
+    width: 100px;
+    height: 30px;
+}
+.nav-3{
+    margin-left: 10px;
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+}
+.heading{
+    margin-left: 10px;
+    color:darkgreen;
+}
+.main-log{
+    display: flex;
+    justify-content: center;
+    height:550px;
+}
+.login-page{
+    border:2px solid;
+    width: 450px;
+    margin-top: 50px;
+}
+.one{
+ display: grid;
+ grid-template-columns: 50% 50%;
+}
+.field{
+    margin: 10px;
+    font:normal 20px 'calibri';
+    border: 1px solid black;
+    margin-top: 20px;
+}
+.check{
+    margin: 20px;
+}
+
+.radio-1{
+    margin: 15px;
+    margin-left: 25px;
+    font:normal 90px 'calibri';
+    font-size: xx-large;
+}
+.date{
+    margin-left: 33px;
+    width: 205px;
+    font:normal 20px 'calibri';
+}
+.log{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.hed{
+    margin-left: 10px;
+}
+.info{
+    border: 1px solid;
+    margin-left: 10px;
+    width: 96%;
+    height: 50px;
+}
+.btn{
+    color:azure;
+    background-color: green;
+    margin: 30px;
+    margin-left: 280px;
+    width:150px;
+    border: 1px solid black;
+    height: 25px;
+}
