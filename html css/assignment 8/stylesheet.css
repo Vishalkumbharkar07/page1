@@ -1,0 +1,65 @@
+
+.page-header{
+    color:white;
+    background-color: blue;
+    margin:0px;
+    padding:20px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.card{
+    border:1px solid blue;
+    box-shadow: 3px 3px 3px grey;
+    margin:10px;
+    padding:5px;
+    opacity: 0.6;
+}
+
+.card:hover{
+    opacity: 1;
+}
+.card h3{
+    color:red;
+    text-align:center;
+    margin:0px;
+    background-color: yellow;
+    padding:5px;
+}
+
+.card h3 i{
+    color:darkred;
+}
+
+.part2{
+    margin-top:10px;
+}
+
+.part2 div{
+    display: flex;
+    justify-content: center;
+}
+
+.form-field{
+    font:normal 24px 'calibri';
+    text-align: center;
+    margin:0px 5px 0px 5px;
+}
+
+.left{
+    text-align: left;
+}
+
+.btn{
+    color:white;
+    background-color: blue;
+    padding:10px;
+    margin:5px;
+    width:150px;
+    font:normal 24px 'calibri';
+    border:none;
+    box-shadow: 2px 2px 2px grey;
+}
