@@ -23,17 +23,17 @@
 
                 <section class="part2">
                     <div>
-                        <input type="number" class="form-field" placeholder="distance in km"/>
-                        <select class="form-field left">
-                            <option>Meter</option>
-                            <option>Centimeter</option>
-                            <option>Inches</option>
-                            <option>Feet</option>
+                        <input type="number" class="form-field" id="input-1" placeholder="distance in km"/>
+                        <select class="form-field left" onchange="selectUnit(this)">
+                            <option value="Meter">Meter</option>
+                            <option value="Centimeter">Centimeter</option>
+                            <option value="Inches">Inches</option>
+                            <option value="Feet">Feet</option>
                         </select>
                     </div>
 
                     <div>
-                        <button class="btn">Convert</button>
+                        <button class="btn" onclick="show1()">Convert</button>
                     </div>
                 </section>
             </div>
@@ -48,16 +48,16 @@
 
                 <section class="part2">
                     <div>
-                        <input type="number" class="form-field" placeholder="storage in Byte"/>
-                        <select class="form-field left">
-                            <option>kilobyte</option>
-                            <option>megabyte</option>
-                            <option>Gigabyte</option>
-                            <option>terabyte</option>
+                        <input type="number" class="form-field" id="input-2" placeholder="storage in terabyte"/>
+                        <select class="form-field left" onchange="selectUnit2(this)">
+                            <option value="kilobyte">kilobyte</option>
+                            <option vale="megabyte">megabyte</option>
+                            <option value="Gigabyte">Gigabyte</option>
+                            <option value="byte">byte</option>
                         </select>
                     </div>
                     <div>
-                        <button class="btn">Convert</button>
+                        <button class="btn" onclick="show2()">Convert</button>
                     </div>
                 </section>
             </div>
@@ -72,16 +72,16 @@
 
                 <section class="part2">
                     <div>
-                        <input type="number" class="form-field" placeholder="Temperature in celsius"/>
-                        <select class="form-field left">
-                            <option>Kelvin</option>
-                            <option>Fahrenheit</option>
-                            <option>Rankine</option>
-                            <option>Reaumur</option>
+                        <input type="number" class="form-field" id="input-3"placeholder="Temperature in celsius"/>
+                        <select class="form-field left" onchange="selectUnit3(this)">
+                            <option value="Kelvin">Kelvin</option>
+                            <option value="Fahrenheit">Fahrenheit</option>
+                            <option value="Rankine">Rankine</option>
+                            <option value="Reaumur">Reaumur</option>
                         </select>
                     </div>
                     <div>
-                        <button class="btn">Convert</button>
+                        <button class="btn" onclick="show3()">Convert</button>
                     </div>
                 </section>
             </div>
@@ -96,25 +96,152 @@
 
                 <section class="part2">
                     <div>
-                        <input type="number" class="form-field" placeholder="Length in Yard"/>
-                        <select class="form-field left">
-                            <option>Foot</option>
-                            <option>Hectometer</option>
-                            <option>Fathom</option>
-                            <option>Angstrom</option>
+                        <input type="number" class="form-field" id="input-4" placeholder="Length in Yard"/>
+                        <select class="form-field left" onchange="selectUnit4(this)">
+                            <option value="Feet">Feet</option>
+                            <option value="Hectometer">Hectometer</option>
+                            <option value="Fathom">Fathom</option>
+                            <option value="Angstrom">Angstrom</option>
                         </select>
                     </div>
                     <div>
-                        <button class="btn">Convert</button>
+                        <button class="btn" onclick="show4()">Convert</button>
                     </div>
                 </section>
             </div>
+
 
                 </section>
             </div>
         </div>
 
+        <script>
+            var Dunit = "";
+   
+           function show1() {
+               var km = parseInt(document.getElementById("input-1").value);
+   
+               var ans=0;
+               if(Dunit=="Meter")
+               {
+                   ans = km*1000;
+               }
+               else if(Dunit=="Centimeter")
+               {
+                   ans = km*1000*100;
+               }
+               else if(Dunit=="Inches")
+               {
+                   ans = (km*1000*100)/2.54;
+               }
+               else if(Dunit=="Feet")
+               {
+                   ans =( (km*1000*100)/2.54) / 12;
+               }
+   
+               alert(ans);
+   
+   
+           }
+   
+          
+           function selectUnit(target)
+           {
+               Dunit=target.value;
+           }
 
+
+           var Dunit2 = "";
+   
+     function show2() {
+       var terabyte = parseInt(document.getElementById("input-2").value);
+
+       var ans2=0;
+       if(Dunit2=="kilobyte")
+       {
+           ans2 = terabyte*1000000000;
+       }
+       else if(Dunit2=="megabyte")
+       {
+           ans2 = terabyte*1000000;
+       }
+       else if(Dunit2=="Gigabyte")
+       {
+           ans2 = terabyte*1000;
+       }
+       else if(Dunit2=="byte")
+       {
+           ans2 = terabyte*1000000000000;
+       }
+
+       alert(ans2);
+   }
+       function selectUnit2(target)
+           {
+               Dunit2=target.value;
+           }
+           var Dunit2 = "";
+   
+   function show4() {
+     var celsius = parseInt(document.getElementById("input-3").value);
+
+     var ans3=0;
+     if(Dunit3=="Kelvin")
+     {
+         ans3 = celsius*274.15;
+     }
+     else if(Dunit3=="Fahrenheit")
+     {
+         ans3 = ((celsius*(9/5))+32);
+     }
+     else if(Dunit3=="Rankine")
+     {
+         ans3 = ((celsius*(9/5))+491.67);
+     }
+     else if(Dunit3=="Reaumur")
+     {
+         ans3 = ((celsius*4)/5);
+     }
+
+     alert(ans3);
+ }
+
+     function selectUnit4(target)
+         {
+             Dunit3=target.value;
+         }
+
+         var Dunit4 = "";
+         function show4() {
+            var Yard = parseInt(document.getElementById("input-4").value);
+            var ans4 = 0;
+     if(Dunit4 =="Feet")
+     {
+         ans4 = Yard * 3;
+     }
+     else if(Dunit4 =="Hectometer")
+     {
+         ans4 = Yard * 0.00914;
+     }
+     else if(Dunit4 =="Fathom")
+     {
+         ans4 = Yard * 0.5;
+     }
+     else if(Dunit4 =="Angstrom")
+     {
+         ans4 = Yard * 9144000000 ;
+     }
+
+     alert(ans4);
+    }
+     function selectUnit4(target)
+         {
+             Dunit4 =target.value;
+         }
+
+       </script>
+   
+   
 
 
 
