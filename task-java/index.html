@@ -1,0 +1,58 @@
+
+<html>
+    <head>
+        <title>JavaScript Ex4</title>
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+
+    <body>
+        <div class="section">
+            <h3 class="que-title">Adventure Game Decision Making</h3>
+            <p class="que">You are writing a text-based adventure game. The player encounters a locked door with a numeric keypad. They must enter the correct code to proceed. However, the code changes based on the room they entered previously:</p>
+            <ul>
+                <li>If they were in the "Library", the code is 2468</li>
+                <li>If they were in the "Dungeon", the code is 7531</li>
+                <li>If they were in any other room, the code is 0000</li>
+            </ul>
+
+            <p class="que">Write JavaScript Function tat prompts the player to enter the code and informs them if they can proceed or not?</p>
+            <hr>
+
+            <p class="form-label">Enter Room :</p>
+            <input type="text" id="btn1"/>
+
+            <p class="form-label">Enter Code :</p>
+            <input type="text" id="btn2"/>
+
+            <div class="btn-group">
+                <button onclick="show()">Enter Room</button>
+            </div>
+        </div>
+        <script>
+            var code="";
+            function show(){
+                var a=document.getElementById("btn1").value;
+                var b=parseInt(document.getElementById("btn2").value);
+                console.log(a);
+                console.log(b);
+                if (a==="Labrary") {
+                    if(b===2468) {
+                    console.log("you enetr the game")
+                    }
+                } else if(a ==="Dungeon") {
+                    if(b===7531) {
+                        console.log("you enetr the game")
+                    }
+                }
+                else if (a==="otherroom") {
+                    if(b===0000) {
+                        console.log("you enetr the game")
+                    }
+                }
+                else {
+                    console.log("incorrect account")
+                }
+            }
+        </script>
+    </body>
+</html>
