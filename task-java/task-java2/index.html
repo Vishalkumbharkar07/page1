@@ -25,14 +25,29 @@
             <hr>
 
             <p class="form-label">Enter vacation name:</p>
-            <input type="text" />
+            <input type="text"  id="btn-1"/>
 
            <div class="btn-group">
-                <button>Enter Room</button>
+                <button onclick="show()">Enter Room</button>
             </div>
         </div>
         <script>
-            
+            function show(){
+              var a = document.getElementById("btn-1").value;
+              console.log(a);
+              if(a==="beach"){
+                console.log("recommend destination like maldives,Bahamas,or Hawaii")
+              }
+              else if(a==="mountain"){
+                console.log("recommend destination like switzerland,colorado ,or Nepal")
+              }
+              else if(a==="historical"){
+                console.log("recommend destination like Roman,Athens ,or cairo")
+              }
+              else {
+                console.log("if the customer's perference doesn't match any of the above, recommend general destination like-paris")
+              }
+            }
         </script>
     </body>
 </html>
