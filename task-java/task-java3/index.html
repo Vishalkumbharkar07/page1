@@ -1,0 +1,63 @@
+
+
+<html>
+    <head>
+        <title>JavaScript Ex4</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="section">
+            <h3 class="que-title">Job Application Screening</h3>
+            <p class="que">A company is screening job application.write a program that evaluates candidates based on their qualification and experience:</p>
+            <ul>
+                <li class="li-1">candidates are evaluated based on thair degree (bachelor's, Master's Ph.D.) and years of relevant experience<ul>
+            </ul>
+            <ul>
+                <li class="li-1">Use nested condition to prioritize candidates:</li>
+                    <ul>
+                      <li class="li-2">prefer candidates with a ph.D. and at least 5 years of experience</li>
+                      <li class="li-2">if no Ph.D. candidates,prefer Master's with at least 3 years of Experience</li>
+                      <li class="li-2">if no masters candidate,accept Bachelor's with at least 2 years of experience</li>
+                    </ul>
+            </ul>
+            <hr>
+
+            <p class="form-label">Enter candidate degree:</p>
+            <input type="text"  id="btn1"/>
+
+            <p class="form-label">Enter experience year:</p>
+            <input type="text" id="btn2"/>
+
+           <div class="btn-group">
+                <button onclick="show()">Enter interview</button>
+            </div>
+        </div>
+        <script>
+            var code="";
+            function show(){
+                var a=document.getElementById("btn1").value;
+                var b=parseInt(document.getElementById("btn2").value);
+                console.log(a);
+                console.log(b);
+                if (a==="Ph.D") {
+                    if(b===5) {
+                    console.log("you are eligible")
+                    }
+                } else if(a ==="Master's") {
+                    if(b===3) {
+                        console.log("you are eligible")
+                    }
+                }
+                else if (a==="Bachelor's") {
+                    if(b===2) {
+                        console.log("you are eligible")
+                    }
+                }
+                else {
+                    console.log("you are not eligibal")
+                }
+            }
+        </script>
+    </body>
+</html>
