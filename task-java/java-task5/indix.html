@@ -1,0 +1,70 @@
+
+
+
+<html>
+    <head>
+        <title>JavaScript Ex4</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="section">
+            <h3 class="que-title">Shopping Cart Discount Calculator</h3>
+            <p class="que">A supermarket offers discount based on the total purchase amount and the loyalty card status.write a program that calculate the final ammount a customer needs to pay:</p>
+            <ul>
+               <li class="li-1">If the total purchase amount is less than $50,no discount is applied.</li>
+            </ul>
+            <ul>
+                <li class="li-1">If the total purchase amount is between $50 and $100,apply a 10% discount.</li>
+            </ul>
+            <ul>
+                <li class="li-1">If the total purchase amount is more than $100:</li>
+                <ul>
+                      <li class="li-2">Apply a 15% discount if the customer has gold loyalty card.</li>
+                      <li class="li-2">Apply a 12% discount if the customer has a silver loyalty card.</li>
+                      <li class="li-2">Apply a 5% discount if the customer does not have any loyalty card</li>
+           
+                </ul>
+            </ul>
+            <hr>
+
+            <p class="form-label">Enter the total purches amount:</p>
+            <input type="text"  id="btn1"/>
+
+            <p class="form-label">Enter your loyality card status:</p>
+            <input type="text" id="btn2"/>
+
+           <div class="btn-group">
+                <button onclick="show()">Enter interview</button>
+            </div>
+        </div>
+        <script>
+            var discount="";
+            function show(){
+                var a=parseFloat(document.getElementById("btn1").value);
+                var b= document.getElementById("btn2").value;
+                console.log(a);
+                console.log(b);
+                if (a >= 50) {
+                    if(a >= 100) {
+                       if(b==="gold"){
+                          discount= 0.15;
+                       }
+                       else if(b==="silver"){
+                           discount=0.12;
+                       }
+                       else{
+                        discount= 0.1;
+                       }
+                    } 
+                else{
+                     discount=0;
+                    }  
+                }
+                var finalamount=a-(a*discount);
+                console.log(finalamount);
+            }
+              
+        </script>
+    </body>
+</html>
